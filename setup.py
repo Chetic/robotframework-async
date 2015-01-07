@@ -7,7 +7,7 @@ setup(
     author = "Fredrik Reveny",
     author_email = "chetic@gmail.com",
     url = "https://github.com/Chetic/robotframework-async",
-    download_url = "http://chardet.feedparser.org/download/python3-chardet-1.0.1.tgz",
+    download_url = "https://github.com/Chetic/robotframework-async",
     keywords = ["async", "robotframework"],
     install_requires = ["robotframework >= 2.8.6"],
     packages = ["robotframework-async"],

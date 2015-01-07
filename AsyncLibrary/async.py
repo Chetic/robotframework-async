@@ -6,7 +6,7 @@ from robot.output import librarylogger as log
 from robot.running import Keyword
 from robot.running.context import EXECUTION_CONTEXTS
 
-class async:
+class AsyncLibrary:
     def __init__(self):
         self._thread_pool = {}
         self._last_thread_handle = 0
