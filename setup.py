@@ -6,6 +6,7 @@ setup(
     description = "Generic Robot Framework library for asynchronous keyword execution",
     author = "Fredrik Reveny",
     author_email = "chetic@gmail.com",
+    license = "MIT",
     url = "https://github.com/Chetic/robotframework-async",
     download_url = "https://github.com/Chetic/robotframework-async",
     keywords = ["async", "robotframework"],
