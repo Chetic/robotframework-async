@@ -34,7 +34,10 @@ class AsyncLibrary:
         return EXECUTION_CONTEXTS.current.get_handler(keyword)
 
     def _threaded(self, keyword, *args, **kwargs):
-        import Queue
+        try:
+            import queue
+        except ImportError:
+            import Queue as queue
         import threading
         
         def wrapped_f(q, *args, **kwargs):
@@ -43,7 +46,7 @@ class AsyncLibrary:
             ret = f.run(EXECUTION_CONTEXTS.current, args)
             q.put(ret)
 
-        q = Queue.Queue()
+        q = queue.Queue()
         t = threading.Thread(target=wrapped_f, args=(q,)+args, kwargs=kwargs)
         t.result_queue = q
         return t
